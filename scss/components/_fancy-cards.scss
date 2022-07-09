@@ -13,8 +13,24 @@
   display: grid;
   border: 1px solid var(--clr-neutral-400);
   border-bottom: 5px solid var(--clr-primary);
+  aspect-ratio: 1 / 0.7;
 
-  img {
+  &__number {
+    color: var(--clr-primary);
+    width: min-content;
+    margin-left: auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    width: min-content;
+    margin-top: auto;
+  }
+
+  img,
+  &__arrow {
     display: none;
   }
 }
