@@ -29,6 +29,10 @@
     margin-top: auto;
   }
 
+  &--large {
+    aspect-ratio: 1 / 1;
+  }
+
   img,
   &__arrow {
     display: none;

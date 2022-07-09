@@ -118,6 +118,9 @@ h3 {
   width: min-content;
   margin-top: auto;
 }
+.fancy-card--large {
+  aspect-ratio: 1/1;
+}
 .fancy-card img, .fancy-card__arrow {
   display: none;
 }
