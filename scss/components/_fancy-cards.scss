@@ -60,6 +60,8 @@
   }
 
   &::before {
+    pointer-events: none; // !!! Very smart way to avoid hover over shadow still makes the card pops!!!!
+
     // Transform on opacity is better than transform on box-shadow
     opacity: 0;
     content: '';

@@ -142,6 +142,7 @@ h3 {
   grid-row: 2/span 2;
 }
 .fancy-card::before {
+  pointer-events: none;
   opacity: 0;
   content: "";
   position: absolute;
