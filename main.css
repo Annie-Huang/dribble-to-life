@@ -91,10 +91,18 @@ h3 {
 }
 
 .fancy-card-grid {
+  margin: 6rem auto;
+  width: min(100% - 2rem, 60rem);
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
 }
 
+.fancy-card {
+  padding: 1rem;
+  display: grid;
+  border: 1px solid var(--clr-neutral-400);
+}
 .fancy-card img {
   display: none;
 }
