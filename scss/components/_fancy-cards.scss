@@ -9,11 +9,13 @@
 }
 
 .fancy-card {
+  --padding: 1rem;
+
   text-decoration: none;
   color: inherit;
   background-color: var(--clr-neutral-100); // I don't think it is required.
 
-  padding: 1rem;
+  padding: var(--padding);
   display: grid;
   border: 1px solid var(--clr-neutral-400);
   border-bottom: 5px solid var(--clr-primary);
@@ -37,6 +39,13 @@
     line-height: 1;
     width: min-content;
     margin-top: auto;
+  }
+
+  &__arrow {
+    font-size: 2rem;
+    color: var(--clr-primary);
+    position: absolute;
+    inset: auto var(--padding) calc(var(--padding) / 4) auto; // auto in inset means don't worry about it
   }
 
   &--large {
@@ -83,8 +92,7 @@
     }
   }
 
-  img,
-  &__arrow {
+  img {
     display: none;
   }
 }

@@ -100,10 +100,11 @@ h3 {
 }
 
 .fancy-card {
+  --padding: 1rem;
   text-decoration: none;
   color: inherit;
   background-color: var(--clr-neutral-100);
-  padding: 1rem;
+  padding: var(--padding);
   display: grid;
   border: 1px solid var(--clr-neutral-400);
   border-bottom: 5px solid var(--clr-primary);
@@ -124,6 +125,12 @@ h3 {
   line-height: 1;
   width: min-content;
   margin-top: auto;
+}
+.fancy-card__arrow {
+  font-size: 2rem;
+  color: var(--clr-primary);
+  position: absolute;
+  inset: auto var(--padding) calc(var(--padding) / 4) auto;
 }
 .fancy-card--large {
   aspect-ratio: 1/1;
@@ -159,7 +166,7 @@ h3 {
   opacity: 0.4;
   transform: translate(-50%, 50%);
 }
-.fancy-card img, .fancy-card__arrow {
+.fancy-card img {
   display: none;
 }
 
