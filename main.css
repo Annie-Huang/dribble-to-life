@@ -1,5 +1,5 @@
 :root {
-  --clr-neutral-900: hsl(0, 0, 9%);
+  --clr-neutral-900: hsl(0, 0%, 9%);
   --clr-neutral-400: hsl(210, 1%, 64%);
   --clr-neutral-100: hsl(210, 20%, 94%);
   --clr-primary: hsl(12, 74%, 50%);
@@ -129,6 +129,14 @@ h3 {
 }
 .fancy-card--offset-down {
   grid-row: 2/span 2;
+}
+.fancy-card:hover, .fancy-card:focus {
+  background: var(--clr-neutral-900);
+  transform: scale(1.35);
+  border: 0;
+}
+.fancy-card:hover .fancy-card__title, .fancy-card:focus .fancy-card__title {
+  color: var(--clr-neutral-100);
 }
 .fancy-card img, .fancy-card__arrow {
   display: none;

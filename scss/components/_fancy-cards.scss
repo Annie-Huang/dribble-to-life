@@ -11,7 +11,7 @@
 .fancy-card {
   text-decoration: none;
   color: inherit;
-  
+
   padding: 1rem;
   display: grid;
   border: 1px solid var(--clr-neutral-400);
@@ -42,6 +42,17 @@
   }
   &--offset-down {
     grid-row: 2 / span 2;
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--clr-neutral-900);
+    transform: scale(1.35);
+    border: 0;
+
+    .fancy-card__title {
+      color: var(--clr-neutral-100);
+    }
   }
 
   img,
