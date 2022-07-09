@@ -79,5 +79,13 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.fancy-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.fancy-card img {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map */
