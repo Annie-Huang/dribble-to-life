@@ -148,6 +148,7 @@ h3 {
 }
 .fancy-card:hover::before, .fancy-card:focus::before {
   opacity: 1;
+  transform: translate(-50%, 50%);
 }
 .fancy-card img, .fancy-card__arrow {
   display: none;
