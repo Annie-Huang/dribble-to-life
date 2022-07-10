@@ -25,7 +25,7 @@
   position: relative;
   z-index: 1;
   transition: transform 350ms ease, background-color 350ms ease,
-    color 350ms ease, z-index 0ms 350ms linear;
+    color 350ms ease, z-index 0ms 75ms linear;
 
   &__number {
     color: var(--clr-primary);
@@ -106,8 +106,10 @@
     transform: scale(1.35);
     border: 0;
     z-index: 10;
-    transition: transform 350ms ease, background-color 350ms ease,
-      color 350ms ease;
+    // Need to change z-index straight away otherwise the overlap effect will be too obvious. Also change the z-index transition to be shorter (75ms)
+    /* property name | duration | delay | easing function */
+    transition: z-index 0ms 0ms ease, transform 350ms ease,
+      background-color 350ms ease, color 350ms ease;
 
     animation: shake 900ms ease-in;
     animation-delay: 500ms; // You can actually do 350ms as the card only take 350ms to pops up

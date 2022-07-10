@@ -112,7 +112,7 @@ h3 {
   grid-row: 2;
   position: relative;
   z-index: 1;
-  transition: transform 350ms ease, background-color 350ms ease, color 350ms ease, z-index 0ms 350ms linear;
+  transition: transform 350ms ease, background-color 350ms ease, color 350ms ease, z-index 0ms 75ms linear;
 }
 .fancy-card__number {
   color: var(--clr-primary);
@@ -175,7 +175,8 @@ h3 {
   transform: scale(1.35);
   border: 0;
   z-index: 10;
-  transition: transform 350ms ease, background-color 350ms ease, color 350ms ease;
+  /* property name | duration | delay | easing function */
+  transition: z-index 0ms 0ms ease, transform 350ms ease, background-color 350ms ease, color 350ms ease;
   animation: shake 900ms ease-in;
   animation-delay: 500ms;
 }
