@@ -109,7 +109,7 @@
     transition: transform 350ms ease, background-color 350ms ease,
       color 350ms ease;
 
-    animation: shake 500ms linear;
+    animation: shake 900ms ease-in;
     animation-delay: 500ms; // You can actually do 350ms as the card only take 350ms to pops up
 
     .fancy-card__title {
@@ -125,11 +125,12 @@
       transition: transform 150ms ease;
     }
 
+    // Need to look like it pops up first, and then shaking out the images hiding behind the .fancy-card.
     // @for $image from 0 through 5 {    <<< through means include 5
     // @for $image from 0 to 6 {         <<< through means exclude 6
     @for $image from 0 to 6 {
       .fancy-card__image:nth-of-type(#{$image + 1}) {
-        transition-delay: 550ms + $image * 50;
+        transition-delay: 800ms + $image * 80;
       }
     }
 
