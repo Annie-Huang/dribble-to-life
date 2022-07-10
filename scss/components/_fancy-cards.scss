@@ -62,20 +62,33 @@
     grid-row: 2 / span 2;
   }
 
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  // This is the shadow
   &::before {
     pointer-events: none; // !!! Very smart way to avoid hover over shadow still makes the card pops!!!!
 
     // Transform on opacity is better than transform on box-shadow
     opacity: 0;
-    content: '';
-    position: absolute;
-    inset: 0;
+
     //box-shadow: 0 0 3rem rgb(black, 1);
     background: black;
     filter: blur(2em); // The lower the blur value, the more square you can see.
-    z-index: -1;
+    z-index: -3;
     transform: translate(0, 0); // I don't think you need this line.
     transition: opacity 350ms ease, transform 350ms ease;
+  }
+
+  // This is the card's background color
+  &::after {
+    z-index: -1;
+    background: var(--clr-neutral-100);
+    transition: background-color 350ms ease;
   }
 
   &:hover,
@@ -103,10 +116,18 @@
       opacity: 0.4;
       transform: translate(-50%, 50%);
     }
+
+    &::after {
+      background: var(--clr-neutral-900);
+    }
   }
 
+  // so the lowest level is ::before (shadow), and then images on top of ::before, and ::after (card background color) on the topest
   img {
-    display: none;
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+    width: 70%;
   }
 }
 
