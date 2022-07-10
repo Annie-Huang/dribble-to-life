@@ -131,6 +131,9 @@ h3 {
   color: var(--clr-primary);
   position: absolute;
   inset: auto var(--padding) calc(var(--padding) / 4) auto;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 200ms ease-in, opacity 200ms linear;
 }
 .fancy-card--large {
   aspect-ratio: 1/1;
@@ -162,6 +165,10 @@ h3 {
 }
 .fancy-card:hover .fancy-card__title, .fancy-card:focus .fancy-card__title {
   color: var(--clr-neutral-100);
+}
+.fancy-card:hover .fancy-card__arrow, .fancy-card:focus .fancy-card__arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 .fancy-card:hover::before, .fancy-card:focus::before {
   opacity: 0.4;
