@@ -162,6 +162,8 @@ h3 {
   border: 0;
   z-index: 10;
   transition: transform 350ms ease, background-color 350ms ease, color 350ms ease;
+  animation: shake 500ms linear;
+  animation-delay: 500ms;
 }
 .fancy-card:hover .fancy-card__title, .fancy-card:focus .fancy-card__title {
   color: var(--clr-neutral-100);
@@ -176,6 +178,30 @@ h3 {
 }
 .fancy-card img {
   display: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1.35);
+  }
+  25% {
+    transform: scale(1.35) rotate(5deg);
+  }
+  40% {
+    transform: scale(1.35) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.35) rotate(2deg);
+  }
+  60% {
+    transform: scale(1.35) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.35) rotate(2deg);
+  }
+  100% {
+    transform: scale(1.35);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
