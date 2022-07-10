@@ -186,6 +186,27 @@ h3 {
   opacity: 1;
   transform: translateX(0);
 }
+.fancy-card:hover .fancy-card__image, .fancy-card:focus .fancy-card__image {
+  transition: transform 150ms ease;
+}
+.fancy-card:hover .fancy-card__image:nth-of-type(1), .fancy-card:focus .fancy-card__image:nth-of-type(1) {
+  transition-delay: 550ms;
+}
+.fancy-card:hover .fancy-card__image:nth-of-type(2), .fancy-card:focus .fancy-card__image:nth-of-type(2) {
+  transition-delay: 600ms;
+}
+.fancy-card:hover .fancy-card__image:nth-of-type(3), .fancy-card:focus .fancy-card__image:nth-of-type(3) {
+  transition-delay: 650ms;
+}
+.fancy-card:hover .fancy-card__image:nth-of-type(4), .fancy-card:focus .fancy-card__image:nth-of-type(4) {
+  transition-delay: 700ms;
+}
+.fancy-card:hover .fancy-card__image:nth-of-type(5), .fancy-card:focus .fancy-card__image:nth-of-type(5) {
+  transition-delay: 750ms;
+}
+.fancy-card:hover .fancy-card__image:nth-of-type(6), .fancy-card:focus .fancy-card__image:nth-of-type(6) {
+  transition-delay: 800ms;
+}
 .fancy-card:hover .fancy-card__image:nth-of-type(1), .fancy-card:focus .fancy-card__image:nth-of-type(1) {
   transform: translate(170%, -60%) rotate(10deg);
 }

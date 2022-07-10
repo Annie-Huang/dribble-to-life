@@ -121,6 +121,18 @@
       transform: translateX(0);
     }
 
+    .fancy-card__image {
+      transition: transform 150ms ease;
+    }
+
+    // @for $image from 0 through 5 {    <<< through means include 5
+    // @for $image from 0 to 6 {         <<< through means exclude 6
+    @for $image from 0 to 6 {
+      .fancy-card__image:nth-of-type(#{$image + 1}) {
+        transition-delay: 550ms + $image * 50;
+      }
+    }
+
     // This is not exactly the same as kevin as he only got 5 cards
     .fancy-card__image:nth-of-type(1) {
       transform: translate(170%, -60%) rotate(10deg);
