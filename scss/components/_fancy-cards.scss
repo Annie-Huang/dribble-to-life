@@ -124,7 +124,8 @@
     }
 
     .fancy-card__image {
-      transition: transform 150ms ease;
+      transition: box-shadow 0ms linear, transform 150ms ease;
+      box-shadow: -3rem 2rem 2rem rgb(black, 0);
     }
 
     // Need to look like it pops up first, and then shaking out the images hiding behind the .fancy-card.
@@ -132,6 +133,7 @@
     // @for $image from 0 to 6 {         <<< through means exclude 6
     @for $image from 0 to 6 {
       .fancy-card__image:nth-of-type(#{$image + 1}) {
+        box-shadow: -3rem 2rem 2rem rgb(black, 0.1);
         transition-delay: 800ms + $image * 80;
       }
     }
